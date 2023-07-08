@@ -1,0 +1,24 @@
+  <div class="contenedor">
+
+    <div class="contenedorRandom">
+      <div class="imagen">
+        <img src="{{personajeRandom.image}}" alt="">
+      </div>
+
+      <div class="info">
+        <div>
+          <button (click)="generarPersonajeRandom()">Discover a random character</button>
+          <p><strong>Name: </strong> {{personajeRandom.name}}</p>
+          <p><strong>Gender: </strong> {{personajeRandom.gender}}</p>
+          <p><strong>Species: </strong> {{personajeRandom.species}}</p>
+          <p><strong>Origin: </strong> {{personajeRandom.origin?.name}}</p>
+          <p><strong>Status: </strong> {{personajeRandom.status}}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="infoPage">
+      <p class="parrafoInfo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil, doloribus atque libero ut at distinctio eum ipsa voluptatem nobis numquam quod facilis molestias, ipsam fugit nostrum tempore? Ab, veniam esse eius ut inventore impedit tempora unde explicabo quae consequuntur repellendus delectus eveniet suscipit incidunt temporibus cum nemo. Minus repellat tempore molestias impedit rem culpa incidunt officia natus saepe cupiditate, placeat id nulla dicta! Temporibus quod amet ipsam animi! Veritatis omnis, ex error quo sit possimus numquam, excepturi recusandae provident eligendi quam consequatur molestias corporis voluptatem dolores harum non voluptates magnam! Aliquam dolorem explicabo eveniet itaque, iste tenetur porro similique dolore?</p>
+      <a class="parrafoInfo" href="#">Enlace hacia algo</a>
+    </div>
+  </div>

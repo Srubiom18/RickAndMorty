@@ -1,0 +1,119 @@
+.contenedor {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    width: 50%;
+    min-width: 350px;  
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 0.3%;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.inputSearch {
+    border: 0;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    height: 40px;
+}
+
+.resultadoBusqueda {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 35px;
+    width: 90%;
+    justify-content: space-evenly;
+}
+
+.tarjetaPersonaje {
+    width: 150px;
+    border-radius: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+
+.tarjetaPersonaje:hover {
+    transform: translateY(-15px);
+}
+
+.resultadoBusqueda img {
+    width: 100%;
+    border-radius: 14px;
+    border: 2px solid black;
+    box-shadow: 10px 5px 5px 0px rgba(0,0,0,0.45);
+}
+
+.cruz {
+    width: 30px;
+    cursor: pointer;
+}
+
+.status {
+    background-color: rgba(145, 215, 122, 0.756);
+    padding-right: 12px;
+    padding-left: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 16px;
+    border-radius: 12px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.paginacion {
+    width: 50px;
+}
+
+.modal-body .imagen {
+    margin-bottom: 15px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.modal-body img {
+    width: 200px;
+    border-radius: 14px;
+    border: 2px solid black;
+}
+
+.modal-body .info {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+} 
+
+.close {
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+@media (max-width:720px) {
+    .modal-body img {
+        width: auto;
+    }
+
+    .modal-body .info {
+        text-align: start;
+    } 
+}

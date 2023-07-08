@@ -1,0 +1,70 @@
+<div class="contenedor">
+    <svg class="waveTop" id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(248, 248, 248, 1)" offset="0%"></stop><stop stop-color="rgba(248, 248, 248, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,96L26.7,84C53.3,72,107,48,160,46C213.3,44,267,64,320,62C373.3,60,427,36,480,26C533.3,16,587,20,640,26C693.3,32,747,40,800,42C853.3,44,907,40,960,44C1013.3,48,1067,60,1120,64C1173.3,68,1227,64,1280,58C1333.3,52,1387,44,1440,50C1493.3,56,1547,76,1600,72C1653.3,68,1707,40,1760,24C1813.3,8,1867,4,1920,18C1973.3,32,2027,64,2080,76C2133.3,88,2187,80,2240,66C2293.3,52,2347,32,2400,20C2453.3,8,2507,4,2560,12C2613.3,20,2667,40,2720,54C2773.3,68,2827,76,2880,82C2933.3,88,2987,92,3040,82C3093.3,72,3147,48,3200,34C3253.3,20,3307,16,3360,28C3413.3,40,3467,68,3520,74C3573.3,80,3627,64,3680,58C3733.3,52,3787,56,3813,58L3840,60L3840,120L3813.3,120C3786.7,120,3733,120,3680,120C3626.7,120,3573,120,3520,120C3466.7,120,3413,120,3360,120C3306.7,120,3253,120,3200,120C3146.7,120,3093,120,3040,120C2986.7,120,2933,120,2880,120C2826.7,120,2773,120,2720,120C2666.7,120,2613,120,2560,120C2506.7,120,2453,120,2400,120C2346.7,120,2293,120,2240,120C2186.7,120,2133,120,2080,120C2026.7,120,1973,120,1920,120C1866.7,120,1813,120,1760,120C1706.7,120,1653,120,1600,120C1546.7,120,1493,120,1440,120C1386.7,120,1333,120,1280,120C1226.7,120,1173,120,1120,120C1066.7,120,1013,120,960,120C906.7,120,853,120,800,120C746.7,120,693,120,640,120C586.7,120,533,120,480,120C426.7,120,373,120,320,120C266.7,120,213,120,160,120C106.7,120,53,120,27,120L0,120Z"></path></svg>
+    
+    <div class="otroContenedor">
+
+        <div class="accordion-wrapper">
+
+          <br><br>
+
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check1">
+              <label class="accordion-label" for="check1">Status</label>
+              <div class="accordion-content">
+                <p><button (click)="filtrarPersonajes('Alive')">Alive</button> <button (click)="filtrarPersonajes('Dead')">Dead</button> <button (click)="filtrarPersonajes('UnknownStatus')">Unknown</button></p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check2">
+              <label class="accordion-label" for="check2">Species</label>
+              <div class="accordion-content">
+                <p><button (click)="filtrarPersonajes('Human')">Human</button><button (click)="filtrarPersonajes('Alien')">Alien</button><button (click)="filtrarPersonajes('Humanoid')">Humanoid</button><button (click)="filtrarPersonajes('Poopybutthole')">Poopybutthole</button><button (click)="filtrarPersonajes('Mythological')">Mythological</button><button (click)="filtrarPersonajes('UnknownSpecies')">Unknown</button><button (click)="filtrarPersonajes('Animal')">Animal</button><button (click)="filtrarPersonajes('Disease')">Disease</button><button (click)="filtrarPersonajes('Robot')">Robot</button><button (click)="filtrarPersonajes('Cronenberg')">Cronenberg</button><button (click)="filtrarPersonajes('Planet')">Planet</button></p>
+              </div>
+            </div>
+            <div class="accordion">
+              <input type="radio" name="radio-a" id="check3">
+              <label class="accordion-label" for="check3">Gender</label>
+              <div class="accordion-content">
+                <p><button (click)="filtrarPersonajes('Female')">Female</button><button (click)="filtrarPersonajes('Male')">Male</button><button (click)="filtrarPersonajes('Genderless')">Genderless</button><button (click)="filtrarPersonajes('UnknownGender')">Unknown</button></p>
+              </div>
+            </div>
+            
+          </div>
+
+          <div class="tarjetas">
+            <span *ngFor="let personaje of personajesFiltrados" class="tarjetaPersonaje" (click)="cambiarInfoPersonaje(personaje.id)" (click)="modal.open(contenido)">
+              <img src="{{personaje.image}}">
+              <p>{{personaje.name}}</p>
+              <span class="status" [ngStyle]="{'background-color':personaje.status == 'Alive' ? 'rgba(145, 215, 122, 0.756)' : 'rgba(224, 80, 80, 0.663)'}">{{personaje.status}}</span>
+          </span>
+          </div>
+          
+    </div>
+
+    <svg class="waveBottom" id="wave" style="transform:rotate(0deg); transition: 0.3s" viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0"><stop stop-color="rgba(248, 248, 248, 1)" offset="0%"></stop><stop stop-color="rgba(248, 248, 248, 1)" offset="100%"></stop></linearGradient></defs><path style="transform:translate(0, 0px); opacity:1" fill="url(#sw-gradient-0)" d="M0,12L26.7,18C53.3,24,107,36,160,52C213.3,68,267,88,320,90C373.3,92,427,76,480,70C533.3,64,587,68,640,68C693.3,68,747,64,800,52C853.3,40,907,20,960,12C1013.3,4,1067,8,1120,16C1173.3,24,1227,36,1280,50C1333.3,64,1387,80,1440,74C1493.3,68,1547,40,1600,30C1653.3,20,1707,28,1760,30C1813.3,32,1867,28,1920,32C1973.3,36,2027,48,2080,56C2133.3,64,2187,68,2240,68C2293.3,68,2347,64,2400,58C2453.3,52,2507,44,2560,38C2613.3,32,2667,28,2720,22C2773.3,16,2827,8,2880,22C2933.3,36,2987,72,3040,76C3093.3,80,3147,52,3200,46C3253.3,40,3307,56,3360,70C3413.3,84,3467,96,3520,96C3573.3,96,3627,84,3680,66C3733.3,48,3787,24,3813,12L3840,0L3840,120L3813.3,120C3786.7,120,3733,120,3680,120C3626.7,120,3573,120,3520,120C3466.7,120,3413,120,3360,120C3306.7,120,3253,120,3200,120C3146.7,120,3093,120,3040,120C2986.7,120,2933,120,2880,120C2826.7,120,2773,120,2720,120C2666.7,120,2613,120,2560,120C2506.7,120,2453,120,2400,120C2346.7,120,2293,120,2240,120C2186.7,120,2133,120,2080,120C2026.7,120,1973,120,1920,120C1866.7,120,1813,120,1760,120C1706.7,120,1653,120,1600,120C1546.7,120,1493,120,1440,120C1386.7,120,1333,120,1280,120C1226.7,120,1173,120,1120,120C1066.7,120,1013,120,960,120C906.7,120,853,120,800,120C746.7,120,693,120,640,120C586.7,120,533,120,480,120C426.7,120,373,120,320,120C266.7,120,213,120,160,120C106.7,120,53,120,27,120L0,120Z"></path></svg>
+</div>
+
+
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Character information</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="imagen">
+      <img src="{{personajeModal.image}}">
+    </div>
+
+    <div class="info row">
+      <p class="col-md-12 col-sm-12"><strong>Name: </strong> {{personajeModal.name}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Gender: </strong> {{personajeModal.gender}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Species: </strong> {{personajeModal.species}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Origin: </strong> {{personajeModal.origin?.name}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Status: </strong> {{personajeModal.status}}</p>
+    </div>
+
+  </div>
+</ng-template>

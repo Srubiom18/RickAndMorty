@@ -1,0 +1,50 @@
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.contenedorRandom {
+    width: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    padding-bottom: 20px;
+
+}
+
+.infoPage {
+    width: 80vh;
+    text-align: justify;
+    padding-bottom: 4%;
+}
+
+.parrafoInfo {
+    width: 100%;
+    padding: 3%;
+}
+
+img {
+    width: 250px;
+    border-radius: 14px;
+    border: 2px solid black;
+    box-shadow: 10px 5px 5px 0px rgba(0,0,0,0.45);
+    margin-right: 25px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+p {
+    margin-top: 10px;
+    width: 300px;
+}
+
+button {
+    margin-top: 25px;
+    padding: 5px 20px 5px 20px;
+}

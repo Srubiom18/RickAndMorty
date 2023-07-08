@@ -1,0 +1,57 @@
+<div class="contenedor">
+  <div class="search">
+    <input type="text" placeholder="Are you looking for something specific?" class="inputSearch" id="search"
+      name="search" #search (keyup)="buscador(search.value)">
+    <i *ngIf="cruz"><img src="../../assets/IMG/cruz.png" class="cruz"></i>
+  </div>
+
+  <div class="resultadoBusqueda" *ngIf="principales">
+    <span *ngFor="let personaje of arrayPrincipales" class="tarjetaPersonaje"
+      (click)="cambiarInfoPersonaje(personaje.id)" (click)="modal.open(contenido)">
+      <img src="{{personaje.image}}">
+      <p>{{personaje.name}}</p>
+      <span class="status"
+        [ngStyle]="{'background-color':personaje.status == 'Alive' ? 'rgba(145, 215, 122, 0.756)' : 'rgba(224, 80, 80, 0.663)'}">{{personaje.status}}</span>
+    </span>
+  </div>
+
+  <div class="resultadoBusqueda" *ngIf="buscados">
+    <span *ngFor="let personaje of arrayBuscados" class="tarjetaPersonaje" (click)="cambiarInfoPersonaje(personaje.id)" (click)="modal.open(contenido)">
+      <img src="{{personaje.image}}">
+      <p>{{personaje.name}}</p>
+      <span class="status"
+        [ngStyle]="{'background-color':personaje.status == 'Alive' ? 'rgba(145, 215, 122, 0.756)' : 'rgba(224, 80, 80, 0.663)'}">{{personaje.status}}</span>
+    </span>
+  </div>
+
+  <div *ngIf="paginacion">
+    <img src="../../assets/IMG/izq.png" (click)="anteriorPagina()" *ngIf="prev" class="paginacion">
+    <img src="../../assets/IMG/der.png" (click)="siguientePagina()" *ngIf="next" class="paginacion">
+  </div>
+</div>
+
+
+
+<ng-template #contenido let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Character information</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+    <div class="imagen">
+      <img src="{{personajeModal.image}}">
+    </div>
+
+    <div class="info row">
+      <p class="col-md-12 col-sm-12"><strong>Name: </strong> {{personajeModal.name}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Gender: </strong> {{personajeModal.gender}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Species: </strong> {{personajeModal.species}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Origin: </strong> {{personajeModal.origin?.name}}</p>
+      <p class="col-md-6 col-sm-12"><strong>Status: </strong> {{personajeModal.status}}</p>
+    </div>
+
+  </div>
+</ng-template>

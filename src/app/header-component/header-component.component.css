@@ -1,0 +1,62 @@
+header {
+    position: relative;
+    width: 100%; 
+    max-height: 500px;  
+    background-image: url(../../assets/IMG/fondo2.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+div {
+    padding-bottom: 10%;
+}
+
+header .wave {
+    position: absolute; 
+    bottom: -1px;
+    left: 0;
+    right: 0;
+}
+
+header .logo {
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 15%;
+}
+
+header h1 {
+    font-family: "Rick";
+    text-align: center;
+    color: #40B5CB;
+    font-size: 6rem;
+
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 5%;
+
+    text-shadow: 2px  0px 0px #C0DF40,
+    0px  2px 0px #C0DF40,
+   -2px  0px 0px #C0DF40,
+    0px -2px 0px #C0DF40;
+}
+
+.gancho {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-top: 1%;
+    opacity: 30%;
+}
+
+@font-face {
+    font-family: "Rick";
+    src: url(../../assets/tipografias/Rick.ttf);
+}

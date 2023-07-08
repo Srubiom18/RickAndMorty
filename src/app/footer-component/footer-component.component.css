@@ -1,0 +1,95 @@
+
+    svg {
+        margin-top: -1px;
+    }
+    
+    .footer{
+    background-image: url(../../assets/IMG/fondo2.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align:center;
+    position: relative;
+    padding-bottom: 2%;
+
+    }
+    
+    .redes {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .redes a {
+        width: 70px;
+    }
+
+    .copy {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer .row{
+    width:100%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+
+    .footer .row a{
+    text-decoration:none;
+    color: white;
+    transition:0.5s;
+    }
+
+    .footer .row img {
+        width: 40px;
+        margin-right: 2%;
+        background-color: white;
+        border-radius: 50%;
+        border: 1px solid white;
+    }
+
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+
+    @media (max-width:720px){
+    .footer .row{
+    text-align:left;
+    padding-left:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
+    }
+
+    .redes {
+        justify-content: start;
+    }
+
+    .copy {
+        justify-content: start;
+    }
+
+    }
