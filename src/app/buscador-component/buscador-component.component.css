@@ -80,6 +80,11 @@
     width: 50px;
 }
 
+.modal-body {
+    background: rgb(216,226,235);
+background: linear-gradient(0deg, rgba(216,226,235,1) 0%, rgba(255,255,255,1) 100%);
+}
+
 .modal-body .imagen {
     margin-bottom: 15px;
     width: 90%;
